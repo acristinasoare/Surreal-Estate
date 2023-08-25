@@ -1,3 +1,43 @@
 .add-property {
-  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  background-color: hsla(0, 0%, 100%, 0.863);
+  margin-top: 0;
+}
+
+.add-property__form {
+  margin: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.add-property__form-item {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  color: #66023c;
+  font-weight: bolder;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-property__form-button {
+  background-color: #81516b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.add-property__form-button:hover {
+  background-color: #66023c;
 }
