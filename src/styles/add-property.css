@@ -6,7 +6,7 @@
 }
 
 .add-property__form {
-  margin: 2rem;
+  margin: 1.5rem;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 1.5rem;
@@ -23,6 +23,7 @@
 
 input,
 select {
+  margin-top: 0.2rem;
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
