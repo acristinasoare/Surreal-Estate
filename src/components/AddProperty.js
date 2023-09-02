@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/add-property.css";
+import axios from "axios";
+import Alert from "./Alert";
 
 const AddProperty = () => {
   const initialState = {
@@ -12,11 +14,31 @@ const AddProperty = () => {
       price: 0,
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
+
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+    setAlert({ message: "", isSuccess: false });
+    axios
+      .post("http://localhost:4000/api/v1/PropertyListing", fields)
+      .then(() =>
+        setAlert({
+          message: "Property added.",
+          isSuccess: true,
+        })
+      )
+      .catch(() =>
+        setAlert({
+          message: "Server Error. Please try again later",
+          isSuccess: false,
+        })
+      );
   };
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
@@ -25,6 +47,9 @@ const AddProperty = () => {
   return (
     <div className="add-property">
       <form onSubmit={handleAddProperty} className="add-property__form">
+        <div className="alert">
+          <Alert message={alert.message} success={alert.isSuccess} />
+        </div>
         <div className="add-property__form-item">
           <label htmlFor="title">
             Title
@@ -78,6 +103,7 @@ const AddProperty = () => {
             Bedrooms
             <input
               type="number"
+              min="0"
               id="bedrooms"
               name="bedrooms"
               value={fields.bedrooms}
@@ -90,6 +116,7 @@ const AddProperty = () => {
             Bathrooms
             <input
               type="number"
+              min="0"
               id="bathrooms"
               name="bathrooms"
               value={fields.bathrooms}
@@ -102,6 +129,7 @@ const AddProperty = () => {
             Price
             <input
               type="number"
+              min="0"
               id="price"
               name="price"
               value={fields.price}

@@ -17,12 +17,16 @@
 }
 
 .navbar-links-item {
-  padding: 1.5px 20px;
+  padding: 1.5px 14px;
 }
 
 .link-text {
   text-decoration: none;
-  color: #66023c;
+  color: #790247;
   font-size: large;
   font-weight: bolder;
+}
+
+.link-text:hover {
+  color: #530231;
 }
