@@ -1,0 +1,11 @@
+.property-card__image {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.property-card__image__logo {
+  width: 100%;
+  height: auto;
+}
