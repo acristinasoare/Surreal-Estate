@@ -7,6 +7,7 @@ import {
   faSterlingSign,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import logo from "../img/logo.png";
 
 const PropertyCard = ({
   title,
@@ -19,28 +20,36 @@ const PropertyCard = ({
 }) => {
   return (
     <div className="property-card__container">
-      <div className="property-card__data">{title}</div>
-      <div className="property-card__data">
+      <img
+        className="property-card__logo"
+        src={logo}
+        alt="surreal-estate-logo"
+      />
+      <div className="property-card__title">{title}</div>
+      <div className="property-card__location">
         {type} - {city}
       </div>
 
       <div className="property-card__data">
-        <FontAwesomeIcon icon={faBed} />
+        <FontAwesomeIcon className="property-card__icon" icon={faBed} />
         {bedrooms}
       </div>
 
       <div className="property-card__data">
-        <FontAwesomeIcon icon={faBath} />
+        <FontAwesomeIcon className="property-card__icon" icon={faBath} />
         {bathrooms}
       </div>
 
       <div className="property-card__data">
-        <FontAwesomeIcon icon={faSterlingSign} />
+        <FontAwesomeIcon
+          className="property-card__icon"
+          icon={faSterlingSign}
+        />
         {price}
       </div>
-      <div>
+      <div className="property-card__email-link">
         <a href={`mailto:${email}`}>
-          <FontAwesomeIcon icon={faEnvelope} />
+          <FontAwesomeIcon className="property-card__icon" icon={faEnvelope} />
           Email
         </a>
       </div>
