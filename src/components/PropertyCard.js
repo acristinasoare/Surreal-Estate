@@ -1,8 +1,6 @@
 import React from "react";
 import "../styles/property-card.css";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import {
   faBed,
   faBath,

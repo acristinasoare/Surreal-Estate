@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/add-property.css";
 import axios from "axios";
+import "../styles/add-property.css";
 import Alert from "./Alert";
 
 const AddProperty = () => {

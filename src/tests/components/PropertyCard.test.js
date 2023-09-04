@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import PropertyCard from "../../components/PorpertyCard";
+import PropertyCard from "../../components/PropertyCard";
 
 describe("PropertyCard", () => {
   const validProps = {

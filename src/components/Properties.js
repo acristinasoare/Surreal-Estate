@@ -1,11 +1,8 @@
-// eslint-disable-next-line import/no-duplicates
-import React from "react";
-// eslint-disable-next-line import/no-duplicates
-import { useState, useEffect } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PropertyCard from "./PorpertyCard";
+import PropertyCard from "./PropertyCard";
 import Alert from "./Alert";
+import SideBar from "./SideBar";
 import "../styles/properties.css";
 
 const Properties = () => {
@@ -34,6 +31,9 @@ const Properties = () => {
     <div>
       <div className="alert">
         <Alert message={alert.message} error={alert.isError} />
+      </div>
+      <div className="sidebar">
+        <SideBar />
       </div>
       <div className="properties">
         {properties.map((property) => (
