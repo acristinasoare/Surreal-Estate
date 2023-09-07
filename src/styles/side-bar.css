@@ -1,0 +1,21 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.sidebar-title {
+  font-weight: 900;
+}
+
+.sidebar-div {
+  margin-top: 20px;
+}
+
+.sidebar-link {
+  color: black;
+}

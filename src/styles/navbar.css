@@ -1,32 +1,33 @@
 .navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: white;
+  color: black;
+  padding: 10spx 0px;
 }
 
 .logo {
-  width: 200px;
-  height: auto;
+  max-width: 15%;
 }
 
 .navbar-links {
+  list-style: none;
+  margin: 15px;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  list-style-type: none;
-  margin-bottom: 2px;
-  padding-bottom: 2px;
 }
 
 .navbar-links-item {
-  padding: 1.5px 14px;
+  margin-right: 20px;
 }
 
 .link-text {
   text-decoration: none;
-  color: #790247;
-  font-size: large;
-  font-weight: bolder;
+  color: black;
+  font-weight: bold;
 }
 
 .link-text:hover {
-  color: #530231;
+  color: #ffc107;
 }

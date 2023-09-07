@@ -2,9 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  margin-left: 2rem;
+  margin-left: 20%;
   margin-right: 2rem;
-  margin-top: 3rem;
 }
 
 .properties-item {
