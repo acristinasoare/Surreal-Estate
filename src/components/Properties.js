@@ -29,6 +29,7 @@ const Properties = () => {
   }, []);
 
   const { search } = useLocation();
+
   useEffect(() => {
     axios
       .get(`http://localhost:4000/api/v1/PropertyListing${search}`)
